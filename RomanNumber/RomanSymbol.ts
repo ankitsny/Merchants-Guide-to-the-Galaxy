@@ -1,4 +1,4 @@
-import { IRomanSymbol } from "./ISymbol";
+import { IRomanSymbol } from "./IRomanSymbol";
 export class RomanSymbol implements IRomanSymbol {
 
   private _symbol!: string;

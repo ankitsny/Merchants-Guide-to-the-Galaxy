@@ -1,4 +1,4 @@
-import { IRomanSymbol } from "./ISymbol"
+import { IRomanSymbol } from "./IRomanSymbol"
 export interface IRomanNumber {
   getSymbolFromAlias(alias: string): [string | null, Error | null]
   getAliasFromSymbol(symbol: string): [string | null, Error | null]

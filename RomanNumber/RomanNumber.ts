@@ -1,5 +1,5 @@
 import { IRomanNumber } from "./IRomanNumber";
-import { IRomanSymbol } from "./ISymbol";
+import { IRomanSymbol } from "./IRomanSymbol";
 
 
 interface myObj {
@@ -130,8 +130,7 @@ export class RomanNumber implements IRomanNumber {
       if (err) return [null, err];
 
       // @ts-ignore
-      [pre, err] = this.getValueFromSymbol(roman.charAt(i - 1));
-      if (err) return [null, err];
+      [pre] = this.getValueFromSymbol(roman.charAt(i - 1));
 
       if (curr <= pre) {
         // @ts-ignore

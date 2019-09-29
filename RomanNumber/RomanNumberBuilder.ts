@@ -1,5 +1,5 @@
 import { RomanNumber } from "./RomanNumber";
-import { RomanSymbol } from "./Symbol";
+import { RomanSymbol } from "./RomanSymbol";
 import { IRomanNumber } from "./IRomanNumber";
 
 const romanSymbols = {

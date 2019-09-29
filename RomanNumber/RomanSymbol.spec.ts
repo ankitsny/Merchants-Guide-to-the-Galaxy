@@ -1,5 +1,5 @@
-import { IRomanSymbol } from "./ISymbol";
-import { RomanSymbol } from "./Symbol";
+import { IRomanSymbol } from "./IRomanSymbol";
+import { RomanSymbol } from "./RomanSymbol";
 describe("Symbol", () => {
   let rs: IRomanSymbol
   beforeAll((done) => {
