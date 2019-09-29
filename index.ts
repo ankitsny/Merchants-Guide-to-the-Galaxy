@@ -5,7 +5,11 @@ import { OperationManager } from "./src/Operations/OperationManager";
 
 
 (function init() {
-  const operationManger: IOperationManager = OperationManager.newOperationManger();
-  new FileOperationMode("./help", operationManger).run();
-  // console.log(process.argv);
+  const operationManger: IOperationManager = OperationManager
+    .newOperationManger();
+
+  // TODO: load the allpication based on mode user wants
+
+  new FileOperationMode(process.argv[2] || "default-input.txt",
+    operationManger).run();
 })();

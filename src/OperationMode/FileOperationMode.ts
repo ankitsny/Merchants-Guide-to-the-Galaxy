@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import { resolve } from "path";
+import { resolve, join } from "path";
 
 import { IOperationMode } from "./IOperationMode";
 import { IOperationManager } from "../Operations/IOperationManager";

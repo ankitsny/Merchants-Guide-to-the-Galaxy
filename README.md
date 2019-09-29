@@ -10,4 +10,11 @@
 2. Change the working directory to the root of the project.
 3. install node modules, run `npm install`
 4. run `npm start [filepath]` to build and execute.
-   **filepath**
+
+   _filepath:_ pass file path(relative or absolute path, optional)
+
+> default `filepath` is `default-input.txt`;
+
+## Test
+
+- run `npm test`
