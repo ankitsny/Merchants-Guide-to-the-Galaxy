@@ -1,7 +1,7 @@
 import { IOperation } from "../interfaces/IOperation";
 
 export class EvaluateMetalCredits implements IOperation {
-  private opName: string = "EVALUATE_METAL_CREDturIT";
+  private opName: string = "EVALUATE_METAL_CREDIT";
 
   static create(): IOperation {
     return new EvaluateMetalCredits();
