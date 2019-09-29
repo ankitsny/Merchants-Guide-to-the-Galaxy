@@ -2,8 +2,7 @@ import { readFileSync } from "fs";
 import { resolve } from "path";
 
 import { IOperationMode } from "./IOperationMode";
-import { IOperationManager } from "../interfaces/IOperationManager";
-import { OperationManager } from "../Operations/OperationManager";
+import { IOperationManager } from "../Operations/IOperationManager";
 
 export class FileOperationMode implements IOperationMode {
   private filePath: string;
@@ -32,18 +31,21 @@ export class FileOperationMode implements IOperationMode {
       this.exit(0);
     }
 
-    const output = this.fileContents.split("\n").map(input => {
-      return this.operationManager.execute(input);
-    });
+    const output: string[] = [];
+    for (let cmd of this.fileContents.split("\n")) {
+      if (cmd === "") continue;
+      const out = this.operationManager.execute(cmd);
+      output.push(out);
+    }
 
     // Print the result
-    console.log(output.join("\n"));
+    console.log(output.filter(out => !!out).join("\n"));
 
     this.exit(0);
   }
 
   exit(code: number = 0) {
-    console.log("Exiting...");
+    // console.log("Exiting...");
     process.exit(code);
   }
 }

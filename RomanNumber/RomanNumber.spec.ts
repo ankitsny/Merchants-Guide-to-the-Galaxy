@@ -85,4 +85,14 @@ describe("Roman Number Test", () => {
     expect(rns.getValueFromAlias("RANDOM")[1]).toBeInstanceOf(Error);
   })
 
+  test("#aliasSequenceToBinary", () => {
+    rns.setAlias("X", "TEN");
+    expect(rns.aliasSequenceToDecimal("TEN TEN")[0]).toEqual(20);
+  })
+
+  test("#aliasSequenceToBinary", () => {
+    rns.setAlias("X", "TEN");
+    expect(rns.aliasSequenceToDecimal("TEN INVALID")[1]).toBeInstanceOf(Error);
+  })
+
 })

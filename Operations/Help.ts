@@ -1,10 +1,14 @@
-import { IOperation } from "../interfaces/IOperation";
+import { IOperation } from "./IOperation";
 
 export class Help implements IOperation {
-  private opName: string = "HELP";
+  static CMDName: string = "HELP";
 
   static create(): IOperation {
     return new Help();
+  }
+
+  static checkCMD(cmd: string): boolean {
+    return cmd.toUpperCase() == Help.CMDName
   }
 
   pasre(args: string): Error {
@@ -32,6 +36,6 @@ export class Help implements IOperation {
   }
 
   public get operationName(): string {
-    return this.opName;
+    return Help.CMDName;
   }
 }

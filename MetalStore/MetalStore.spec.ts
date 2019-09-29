@@ -14,4 +14,14 @@ describe("Metal Store", () => {
     metalStore.set("Gold", 1000)
     expect(metalStore.get("Gold")).toEqual(1000);
   })
+
+  test("#getWorth", () => {
+    metalStore.set("Gold", 5);
+    expect(metalStore.getWorth("Gold", 4)).toEqual(20)
+  })
+
+  test("#getWorth", () => {
+    metalStore.set("Gold", 5);
+    expect(metalStore.getWorth("Silver", 4)).toEqual(undefined)
+  })
 })

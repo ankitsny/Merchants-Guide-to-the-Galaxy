@@ -1,11 +1,5 @@
-import { RomanNumberBuilder } from "./RomanNumberBuilder"
+import { RomanNumberBuilder } from "./RomanNumberBuilder";
 
-(function T() {
-  const x = new RomanNumberBuilder();
-  const rs = x.build();
+const romanNumber = new RomanNumberBuilder().build();
 
-  rs.setAlias("I", "ANKSO");
-
-
-  console.log(rs.getSymbolFromAlias("ANKSO"));
-})()
+export { romanNumber as RomanNumberService };

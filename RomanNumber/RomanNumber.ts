@@ -105,15 +105,25 @@ export class RomanNumber implements IRomanNumber {
 
 
   setAlias(symbol: string, alias: string) {
-    this.getSymbols().some(_sym => {
+    for (let _sym of this.getSymbols()) {
       if (_sym.getSymbol() === symbol) {
         _sym.setAlias(alias);
-        return true;
+        break;
       }
-      return false;
-    });
+    }
   }
 
+  aliasSequenceToDecimal(aliasSequence: string): [number | null, Error | null] {
+    let [roman, err] = this.getRomanFromAliasSequence(aliasSequence);
+    if (err || roman === null) {
+      return [null, err];
+    }
+    let [decimalNo, err1] = this.toDecimal(roman);
+    if (err1 instanceof Error) {
+      return [null, err1];
+    }
+    return [decimalNo, null];
+  }
 
   toDecimal(roman: string): [number | null, Error | null] {
     if (!roman) return [null, new Error("Invalid Roman Number")];

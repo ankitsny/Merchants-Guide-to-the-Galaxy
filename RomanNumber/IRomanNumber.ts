@@ -9,4 +9,5 @@ export interface IRomanNumber {
   setSymbols(s: IRomanSymbol[]): any
   getSymbols(): IRomanSymbol[]
   setAlias(symbol: string, alias: string): any
+  aliasSequenceToDecimal(aliasSequence: string): [number | null, Error | null]
 }

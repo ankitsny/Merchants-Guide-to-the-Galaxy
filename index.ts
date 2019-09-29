@@ -1,5 +1,5 @@
 import { FileOperationMode } from "./OperationMode/FileOperationMode";
-import { IOperationManager } from "./interfaces/IOperationManager";
+import { IOperationManager } from "./Operations/IOperationManager";
 import { OperationManager } from "./Operations/OperationManager";
 
 // export abstract class MetalFactory {
@@ -18,5 +18,5 @@ import { OperationManager } from "./Operations/OperationManager";
 (function init() {
   const operationManger: IOperationManager = OperationManager.newOperationManger();
   new FileOperationMode("./help", operationManger).run();
-  console.log(process.argv);
+  // console.log(process.argv);
 })();

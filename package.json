@@ -11,6 +11,10 @@
     "coverageReporters": [
       "text",
       "html"
+    ],
+    "collectCoverageFrom": [
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/dist"
     ]
   },
   "author": "@anks333",
