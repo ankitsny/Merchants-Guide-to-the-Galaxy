@@ -1,19 +1,8 @@
-import { FileOperationMode } from "./OperationMode/FileOperationMode";
-import { IOperationManager } from "./Operations/IOperationManager";
-import { OperationManager } from "./Operations/OperationManager";
+import { FileOperationMode } from "./src/OperationMode/FileOperationMode";
+import { IOperationManager } from "./src/Operations/IOperationManager";
+import { OperationManager } from "./src/Operations/OperationManager";
 
-// export abstract class MetalFactory {
-//   getWorth(): number {
-//     return 1;
-//   }
-//   abstract create(name: string, value: string): number;
-// }
 
-// export class Metal implements MetalFactory {
-//   create(name: string, value: number): number {
-//     return 1;
-//   }
-// }
 
 (function init() {
   const operationManger: IOperationManager = OperationManager.newOperationManger();

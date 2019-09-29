@@ -81,7 +81,7 @@ export class RomanNumber implements IRomanNumber {
       if (err) {
         // alias not found
         // throw error or log it and continue
-        console.log(err);
+        // console.log(err);
         return accu;
       }
       // @ts-ignore
@@ -118,10 +118,8 @@ export class RomanNumber implements IRomanNumber {
     if (err || roman === null) {
       return [null, err];
     }
-    let [decimalNo, err1] = this.toDecimal(roman);
-    if (err1 instanceof Error) {
-      return [null, err1];
-    }
+    let [decimalNo] = this.toDecimal(roman);
+
     return [decimalNo, null];
   }
 

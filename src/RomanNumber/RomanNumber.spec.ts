@@ -94,5 +94,4 @@ describe("Roman Number Test", () => {
     rns.setAlias("X", "TEN");
     expect(rns.aliasSequenceToDecimal("TEN INVALID")[1]).toBeInstanceOf(Error);
   })
-
 })
