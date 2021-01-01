@@ -3,3 +3,5 @@ coverage
 reg
 help
 dist
+
+.DS_Store

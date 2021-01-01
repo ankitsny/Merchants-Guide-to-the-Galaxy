@@ -8,7 +8,7 @@ import { OperationManager } from "./src/Operations/OperationManager";
   const operationManger: IOperationManager = OperationManager
     .newOperationManger();
 
-  // TODO: load the allpication based on mode user wants
+  // TODO: load the application based on mode user wants
 
   new FileOperationMode(process.argv[2] || "default-input.txt",
     operationManger).run();

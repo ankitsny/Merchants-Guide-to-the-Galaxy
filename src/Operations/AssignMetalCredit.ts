@@ -5,6 +5,9 @@ import { MetalService } from "../MetalStore";
 export class AssignMetalCredit implements IOperation {
   static CMDName: string = "ASSIGN_METAL_CREDIT";
 
+  // glob glob Silver is 34 Credits
+
+
   static _regCMD = new RegExp(/^([a-z\s]+) ([A-Z]{1}[a-z]+){1} is ([0-9]+){1} Credits$/g);
 
   private symbolAliasSequence: string = "";

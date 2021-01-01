@@ -151,3 +151,12 @@ export class RomanNumber implements IRomanNumber {
     return [num, null];
   }
 }
+
+
+
+interface data {
+  a: string;
+  b: string;
+}
+
+

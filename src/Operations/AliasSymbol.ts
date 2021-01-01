@@ -13,6 +13,7 @@ export class AliasSymbol implements IOperation {
   }
 
   static checkCMD(cmd: string): boolean {
+    // AliasSymbol._regCMD.exec(cmd);
     const regexp = new RegExp(AliasSymbol._regCMD);
     return regexp.test(cmd);
   }
